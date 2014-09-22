@@ -1,0 +1,26 @@
+body {
+  padding-top: 50px;
+}
+.navbar {
+    background-color: #105cb6 ;
+}
+.navbar-inverse .navbar-nav>li>a ,.navbar-inverse .navbar-brand ,.navbar-inverse .navbar-text{
+    color: #ffffff;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #cccccc;
+}
+.navbar-inverse .navbar-brand:hover{
+    color: #cccccc;
+}
+.sidebar-toggle{
+    padding: 10px;
+}
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
