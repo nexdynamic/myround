@@ -13,14 +13,7 @@ body {
 .navbar-inverse .navbar-brand:hover{
     color: #cccccc;
 }
-.sidebar-toggle{
-    padding: 10px;
+.container{
+    border: 1px #000000;
 }
-.glyphicon {
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-}
+
