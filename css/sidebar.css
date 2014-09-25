@@ -86,3 +86,15 @@
     background: none;
 }
 
+#menu-toggle{
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    background-color: #2e333b;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    right: 18px;
+    font-size: 1.5em;
+
+}
