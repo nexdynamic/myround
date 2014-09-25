@@ -41,12 +41,6 @@ body {
     color: #555;
 }
 
-.header .glyphicon-arrow-right{
-    background-color: #2e333b;
-    font-size: 25px;
-    color: #cccccc;
-}
-
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
