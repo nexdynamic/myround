@@ -11,6 +11,7 @@
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" >
         <link href="css/sidebar.css" rel="stylesheet">
         <link href="css/styles.css"  rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <!-- Scripts -->
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -63,13 +64,45 @@
     <div class="container-fluid">
     <!-- Page Content -->
     <div id="page-content-wrapper">
+        <div class="header">
+             <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars"></i></a>
+        </div>
 
-
-            <div class="header">
-
-                <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars"></i></a>
-
+        <div class="row">
+            <div class="col-md-3">
+                <div class="dashboard-earned">
+                    <h1 class="dashboard-title">This month earned</h1>
+                    <span class="dashboard-amount">£2305</span>
+                </div>
             </div>
+
+            <div class="col-md-3">
+                <div class="dashboard-owed">
+                    <h1 class="dashboard-title">This month owed</h1>
+                    <span class="dashboard-amount">£540</span>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="dashboard-customers">
+                    <h1 class="dashboard-title">This month customers</h1>
+                    <span class="dashboard-icon"><i class="fa fa-group"></i></span>
+                    <span class="dashboard-amount">202</span>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
         </div>

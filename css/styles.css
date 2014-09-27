@@ -1,6 +1,8 @@
+
 body {
-  padding-top: 50px;
-  background-color: #f6f6f6;
+    font-family: 'Lato', sans-serif;
+    padding-top: 50px;
+    background-color: #f6f6f6;
 }
 .navbar {
     background-color: #ffffff ;
@@ -60,6 +62,7 @@ body {
         width: 0;
     }
     #page-content-wrapper{
+
         background-color: #f6f6f6;
     }
 
@@ -67,5 +70,39 @@ body {
         position: relative;
         margin-right: 0;
     }
+}
+
+.dashboard-earned ,.dashboard-owed ,.dashboard-customers  {
+    display: block;
+    height: 100px;
+    color: #ffffff;
+    border-radius: 5px;
+}
+.dashboard-title{
+    text-align: center;
+    padding: 10px;
+    color: #d9e0e7;
+    font-size: 18px;
+}
+
+.dashboard-icon{
+    font-size: 30px;
+}
+.dashboard-amount{
+    font-size: 30px;
+}
+
+.dashboard-customers{
+    background-color: #348fe2;
+
+}
+
+.dashboard-earned{
+    background-color: #00acac;
+}
+
+.dashboard-owed{
+    background-color: #727cb6;
+
 }
 
