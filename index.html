@@ -17,6 +17,8 @@
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/angularjs/angular.js"></script>
 	</head>
+
+
 <body>
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -29,6 +31,7 @@
 			<li><a href="#">To Do</a></li>
             <li><a href="#">Debts</a></li>
             <li><a href="#">Round</a></li>
+            <li><a class="settings-tab" href="#"><i class="fa fa-cogs"></i></a></li>
 		</ul>
 
 </div> <!-- /.navbar navbar-inverse -->
@@ -69,23 +72,23 @@
         </div>
 
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-md-offset-1">
                 <div class="dashboard-earned">
-                    <h1 class="dashboard-title">This month earned</h1>
+                    <h1 class="dashboard-title">THIS MONTH PAID</h1>
                     <span class="dashboard-amount">£2305</span>
                 </div>
             </div>
 
             <div class="col-md-3">
                 <div class="dashboard-owed">
-                    <h1 class="dashboard-title">This month owed</h1>
+                    <h1 class="dashboard-title">THIS MONTH UNPAID</h1>
                     <span class="dashboard-amount">£540</span>
                 </div>
             </div>
 
             <div class="col-md-3">
                 <div class="dashboard-customers">
-                    <h1 class="dashboard-title">This month customers</h1>
+                    <h1 class="dashboard-title">THIS MONTH CUSTOMERS</h1>
                     <span class="dashboard-icon"><i class="fa fa-group"></i></span>
                     <span class="dashboard-amount">202</span>
 
@@ -95,20 +98,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
         </div>
     </div> <!-- /#page-content-wrapper -->
 
-
 </div> <!-- /#wrapper -->
+
 </body>
+
 </html>
