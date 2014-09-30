@@ -18,7 +18,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: rgba(0,0,0,0.2);
+    background-color: #1e1e1e;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -57,13 +57,17 @@
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #ffffff;
+    position: relative;
+    color: #f4f4f4;
+    border-top: 1px solid #32353e;
+    border-bottom: 1px solid #1a1c20;
+    background-color: #272727;
+
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #ffffff;
-    background: rgba(0,0,0,0.3);
 }
 
 .sidebar-nav li a:active,.sidebar-nav li a:focus {
@@ -71,32 +75,25 @@
 }
 
 .sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
+    height: 50px;
+    border-top: 1px solid #32353e;
+    border-bottom: 1px solid #1a1c20;
+    background-color: #272727;
+    text-shadow: 0 0 2px #111
 }
 
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
-}
 
 #menu-toggle{
     border: none;
     border-radius: 0;
     padding: 10px;
-    background: rgba(0,0,0,0.3);
-    color: #f1f1f1;
+    background: #272727;
+    color: #f4f4f4;
     text-decoration: none;
     position: relative;
     right: 15px;
     font-size: 1.5em;
 }
 #menu-toggle:hover{
-    background: rgba(0,0,0,0.5);
     color: #ffffff;
 }
