@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html ng-app="myRoundApp">
+<html ng-app="myRound">
 
 <head>
     <title>My Round</title>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script> <!-- Must be loaded first -->
-    <script src="bower_components/angularjs/angular.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script> <!-- Must be loaded first -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bower_components/angularjs/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css">
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/customersController.js"></script>
+    <script src="js/jobsheetsController.js"></script>
+    <script src="js/debtsController.js"></script>
+    <script src="js/MainController.js"></script>
+    <script src="js/todoController.js"></script>
     <link type="text/css" href="css/main.css" rel="stylesheet">
-
+    <link type="text/css" href="css/dashboard.css" rel="stylesheet">
+    <link type="text/css" href="css/customers.css" rel="stylesheet">
 
 </head>
 
 
 
-<body ng-controller="mainController">
+<body ng-controller="MainController">
 
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
@@ -36,10 +45,13 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" ng-controller="navController" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Dashboard</a></li>
-                <li><a href="#">Customers</a></li>
+                <li ng-class="{ active: isActive('/')}"><a href="#">Dashboard</a></li>
+                <li ng-class="{ active: isActive('/customers')}"><a href="#customers">Customers</a></li>
+                <li ng-class="{ active: isActive('/todo')}"><a href="#todo">To Do</a></li>
+                <li ng-class="{ active: isActive('/jobsheets')}"><a href="#jobsheets">Job Sheets</a></li>
+                <li ng-class="{ active: isActive('/debts')}"><a href="#debts">Debts</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search">
                 <div class="form-group">
@@ -54,11 +66,7 @@
 
 <div class="container">
 
-    <div id="main-content">
-
-
-        {{ message }}
-
+    <div id="main">
 
         <div ng-view></div>
 
@@ -68,4 +76,5 @@
 
 
 </body>
+
 </html>
