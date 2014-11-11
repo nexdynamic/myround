@@ -12,26 +12,35 @@
 .customer-header-options{
     position: relative;
     float: right;
-    width: 300px;
-    height: 50px;
-    padding: 4px;
     text-align: right;
+    display: inline-block;
+
+}
+.header-addCustomer {
+    background: #00b3ee;
+    padding: 10px;
 }
 
+.header-addCustomer a{
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 14px ;
+    font-weight: bold;
+}
 .header-addCustomer i{
     padding-left: 10px;
-    padding-right: 20px;
+    padding-right: 10px;
+    color: #f1f1f1;
 }
 
 .options-sortBy i{
     padding-left: 10px;
     padding-right: 20px;
 }
-.gridContainer{
-    padding-top: 50px;
-}
-.customerListGrid {
-    width: 90%;
-    height: 100%;
-    margin: auto;
+
+.customer-list{
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 50px;
 }

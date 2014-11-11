@@ -1,13 +1,23 @@
-/**
- * Created by Jack on 08/10/2014.
- */
 (function(){
     var app = angular.module("myRound");
 
     var customersController = function($scope){
+
+        $scope.customerData = {
+            enableSorting: true,
+            columnDefs: [
+                { field: 'name' },
+                { field: 'city' },
+                { field: 'street' },
+                { field: 'houseName' },
+                { field: 'price' }
+            ]
+        };
+
+
         $scope.customerData = [
             {
-                "fullName": "Jack Davies",
+                "name": "Jack Davies",
                 "city": "Newent",
                 "street": "Ledbury Road",
                 "houseName": "Open view",
@@ -15,14 +25,14 @@
 
             },
             {
-                "fullName": "Janet Manning",
+                "name": "Janet Manning",
                 "city": "Ross-on-wye",
                 "street": "Upton Bishop",
                 "houseName": "Underwood",
                 "price": 15.00
             },
             {
-                "fullName": "Ruth Harkins",
+                "name": "Ruth Harkins",
                 "city": "Ledbury",
                 "street": "Viking Way",
                 "houseName": "10",

@@ -31,6 +31,11 @@
                 controller: 'debtsController'
 
             })
+
+            .when('/addCustomer',{
+                templateUrl: 'pages/addCustomer.html',
+                controller: 'addCustomerController'
+            })
     });
 
 }());
