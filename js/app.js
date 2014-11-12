@@ -1,6 +1,6 @@
 (function(){
 
-    var app = angular.module("myRound", ['ngRoute', 'ui.bootstrap', 'ui.grid']);
+    var app = angular.module("myRound", ['ngRoute', 'ui.bootstrap']);
 
     app.config(function($routeProvider){
         $routeProvider
@@ -13,6 +13,12 @@
             .when('/customers',{
                 templateUrl: 'pages/customers.html',
                 controller: 'customersController'
+            })
+
+            .when('/customers/customerID:',
+            {
+                controller: 'addCustomerController',
+                templateUrl: 'pages/editCustomer.html'
             })
 
             .when('/todo',{

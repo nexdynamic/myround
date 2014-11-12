@@ -38,9 +38,18 @@
     padding-right: 20px;
 }
 
+.customer-list-headers {
+}
+
 .customer-list{
     border: 1px solid #cccccc;
     border-radius: 5px;
     padding: 10px;
     margin-top: 50px;
+    text-align: left;
+}
+.customerRow li{
+    list-style-type: none;
+    height: 20px;
+
 }

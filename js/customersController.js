@@ -1,45 +1,18 @@
 (function(){
-    var app = angular.module("myRound");
+    var app = angular.module('myRound');
 
-    var customersController = function($scope){
+    var customersController = function ($scope, customerFactory){
+        $scope.customers = [];
 
-        $scope.customerData = {
-            enableSorting: true,
-            columnDefs: [
-                { field: 'name' },
-                { field: 'city' },
-                { field: 'street' },
-                { field: 'houseName' },
-                { field: 'price' }
-            ]
-        };
+            init();
 
+        function init() {
+            $scope.customers = customerFactory.getCustomers();
+        }
+    var deleteCheck = function(){
+        alert("Are you sure you want to delete this customer ?")
 
-        $scope.customerData = [
-            {
-                "name": "Jack Davies",
-                "city": "Newent",
-                "street": "Ledbury Road",
-                "houseName": "Open view",
-                "price": 20.00
-
-            },
-            {
-                "name": "Janet Manning",
-                "city": "Ross-on-wye",
-                "street": "Upton Bishop",
-                "houseName": "Underwood",
-                "price": 15.00
-            },
-            {
-                "name": "Ruth Harkins",
-                "city": "Ledbury",
-                "street": "Viking Way",
-                "houseName": "10",
-                "price": 7.00
-            }
-
-        ];
+    };
 
     };
     app.controller("customersController", customersController);
