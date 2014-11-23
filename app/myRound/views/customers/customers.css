@@ -2,8 +2,11 @@
     height: 50px;
     background-color: #f4f4f4;
     color: #777777;
-    padding: 14px;
+    padding: 15px;
     border-bottom: 1px solid #f1f1f1;
+}
+.customerRow{
+    margin: 25px;
 }
 .customer-header-title{
     font-size: 20px;
@@ -33,23 +36,43 @@
     color: #f1f1f1;
 }
 
-.options-sortBy i{
-    padding-left: 10px;
-    padding-right: 20px;
+.customer-list-headers {
+    background: #00b3ee;
+    color: #f1f1f1;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.customer-list-headers {
+.city-header{
+    height: 40px;
+    width: 150px;
+    background: #00b3ee;
+    position: absolute;
+    top: -10px;
+    left: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+
+
 }
 
 .customer-list{
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    padding: 10px;
     margin-top: 50px;
-    text-align: left;
 }
+.listRow:nth-child(even) {
+    background: #ffffff;
+}
+.listRow:nth-child(odd) {
+    background: #f1f1f1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .customerRow li{
     list-style-type: none;
     height: 20px;
+    padding-top: 2px;
 
 }

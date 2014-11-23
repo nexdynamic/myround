@@ -6,14 +6,13 @@
             $scope.addCustomer = function () {
                 customerFactory.postCustomer(
                     {
-                        name: $scope.newCustomer.name,
+                        name: $scope.newCustomer.customerName,
                         city: $scope.newCustomer.city,
                         street: $scope.newCustomer.street,
                         houseName: $scope.newCustomer.houseName,
                         price: $scope.newCustomer.price
                     });
             };
-
 
         };
 
