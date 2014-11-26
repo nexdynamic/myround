@@ -10,13 +10,13 @@
     <div class="col-lg-5 customerAddForm">
     <form role="form" autocomplete="off">
         <div class="form-group">
-            Name:<input type="text" class="form-control" ng-model="newCustomer.name" placeholder="Customers Name">
+            Name:<input type="text" class="form-control" ng-model="newCustomer.customerName" placeholder="Customers Name">
         </div>
         <div class="form-group">
             City/Town:<input type="text" class="form-control" ng-model="newCustomer.city" placeholder="City Or Town">
         </div>
         <div class="form-group">
-            Street/Town:<input type="text" class="form-control" ng-model="newCustomer.street" placeholder="Street Or Road Name">
+            Street/Road:<input type="text" class="form-control" ng-model="newCustomer.street" placeholder="Street Or Road Name">
         </div>
         <div class="form-group">
             House Name/Number:<input type="text" class="form-control" ng-model="newCustomer.houseName" placeholder="House Name Or Number">
@@ -25,7 +25,7 @@
             Price:<input type="text" class="form-control" ng-model="newCustomer.price" placeholder="£ 0.00">
         </div>
 
-        <a href="#customers"><button ng-click="addCustomer()" class="btn btn-default">Add Customer</button></a>
+        <a href="#customers"><button ng-click="insertCustomer()" class="btn btn-default">Add Customer</button></a>
     </form>
     </div>
 </div>

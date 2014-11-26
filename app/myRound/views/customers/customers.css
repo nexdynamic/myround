@@ -1,36 +1,40 @@
-.customer-header{
+.customer-header {
     height: 50px;
     background-color: #f4f4f4;
     color: #777777;
     padding: 15px;
     border-bottom: 1px solid #f1f1f1;
 }
-.customerRow{
+
+.customerRow {
     margin: 25px;
 }
-.customer-header-title{
+
+.customer-header-title {
     font-size: 20px;
 }
 
-.customer-header-options{
+.customer-header-options {
     position: relative;
     float: right;
     text-align: right;
     display: inline-block;
 
 }
+
 .header-addCustomer {
     background: #00b3ee;
     padding: 10px;
 }
 
-.header-addCustomer a{
+.header-addCustomer a {
     color: #f1f1f1;
     text-decoration: none;
-    font-size: 14px ;
+    font-size: 14px;
     font-weight: bold;
 }
-.header-addCustomer i{
+
+.header-addCustomer i {
     padding-left: 10px;
     padding-right: 10px;
     color: #f1f1f1;
@@ -43,7 +47,7 @@
     padding-bottom: 10px;
 }
 
-.city-header{
+.city-header {
     height: 40px;
     width: 150px;
     background: #00b3ee;
@@ -55,22 +59,23 @@
     text-align: center;
     padding-top: 10px;
 
-
 }
 
-.customer-list{
+.customer-list {
     margin-top: 50px;
 }
+
 .listRow:nth-child(even) {
     background: #ffffff;
 }
+
 .listRow:nth-child(odd) {
     background: #f1f1f1;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.customerRow li{
+.customerRow li {
     list-style-type: none;
     height: 20px;
     padding-top: 2px;

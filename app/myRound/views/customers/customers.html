@@ -1,37 +1,38 @@
-
 <div class="customer-header">
-            <span class="customer-header-title">Customers</span>
-            <div class="customer-header-options">
-                <span class="header-addCustomer"><a href="#addCustomer"><i class="glyphicon glyphicon-plus"></i>Add Customer</a></span>
-            </div>
+    <span class="customer-header-title">Customers</span>
+
+    <div class="customer-header-options">
+        <span class="header-addCustomer"><a href="#addCustomer"><i class="glyphicon glyphicon-plus"></i>Add Customer</a></span>
+    </div>
 </div>
 
-    <div class="col-xs-12 customer-list">
+<div class="col-xs-12 customer-list">
 
 
-        <div class="customerRow row">
+    <div class="customerRow row">
 
         <ul class="customer-list-headers">
             <li>
-                <div class="city-header"> Newent{{customers.city}}</div>
                 <div class="col-xs-1 col-lg-offset-1">Edit</div>
+                <div class="col-xs-2">City</div>
                 <div class="col-xs-2">Name</div>
                 <div class="col-xs-2">Street</div>
                 <div class="col-xs-2">House Name</div>
                 <div class="col-xs-2">Price</div>
             </li>
         </ul>
-            <ul ng-repeat="cust in customers" class="listRow">
-                <li>
-                    <div class="customerEdit col-xs-1 col-xs-offset-1">
-                        <a href="#editCustomer/{{customer.id}}"><i class="glyphicon glyphicon-edit"></i></a>
-                        <a><i class="glyphicon glyphicon-remove"></i></a>
-                    </div>
-                    <div class="col-xs-2">{{cust.customerName}}</div>
-                    <div class="col-xs-2">{{cust.street}}</div>
-                    <div class="col-xs-2">{{cust.houseName}}</div>
-                    <div class="col-xs-1">{{cust.price}}</div>
-                </li>
-            </ul>
-        </div>
+        <ul ng-repeat="customer in customers | orderBy:'city'" class="listRow">
+            <li>
+                <div class="customerEdit col-xs-1 col-xs-offset-1">
+                    <a href="#/editCustomer/{{customer.id}}"><i class="glyphicon glyphicon-edit"></i></a>
+                    <a href="" ng-click="deleteCustomer(customer.id)"><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+                <div class="col-xs-2">{{customer.city}}</div>
+                <div class="col-xs-2">{{customer.customerName}}</div>
+                <div class="col-xs-2">{{customer.street}}</div>
+                <div class="col-xs-2">{{customer.houseName}}</div>
+                <div class="col-xs-1">{{customer.price}}</div>
+            </li>
+        </ul>
     </div>
+</div>

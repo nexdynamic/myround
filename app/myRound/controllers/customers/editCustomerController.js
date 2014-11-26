@@ -12,7 +12,5 @@
                 $scope.customer = customerFactory.getCustomer(customerID);
             }
         }
-
-        app.controller("editCustomerController", editCustomerController);
     });
 }());

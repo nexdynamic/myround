@@ -15,11 +15,6 @@
                 controller: 'customersController'
             })
 
-            .when('/customers/customerID:',
-            {
-                templateUrl: 'views/customers/addCustomer.html',
-                controller: 'addCustomerController'
-            })
             .when('/addCustomer',{
                 templateUrl: 'views/customers/addCustomer.html',
                 controller: 'addCustomerController'
@@ -27,7 +22,7 @@
 
             .when('/editCustomer/:customerID',{
                 templateUrl: 'views/customers/editCustomer.html',
-                controller: 'addCustomerController'
+                controller: 'editCustomerController'
             })
 
             .when('/todo',{

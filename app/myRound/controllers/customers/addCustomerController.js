@@ -1,22 +1,29 @@
 (function(){
     var app = angular.module('myRound');
 
-    var addCustomerController = function($scope, customerFactory) {
+    var addCustomerController = function($scope, $routeParams, customerFactory) {
+        init();
 
-            $scope.addCustomer = function () {
-                customerFactory.postCustomer(
-                    {
-                        name: $scope.newCustomer.customerName,
-                        city: $scope.newCustomer.city,
-                        street: $scope.newCustomer.street,
-                        houseName: $scope.newCustomer.houseName,
-                        price: $scope.newCustomer.price
-                    });
-            };
+        function init() {
+            $scope.customers = customerFactory.getCustomers();
+        }
 
+        $scope.insertCustomer = function () {
+            var customerName = $scope.newCustomer.customerName;
+            var city = $scope.newCustomer.city;
+            var street = $scope.newCustomer.street;
+            var houseName = $scope.newCustomer.houseName;
+            var price = $scope.newCustomer.price;
+
+            customerFactory.insertCustomer(customerName, city, street, houseName, price);
+            $scope.newCustomer.customerName = '';
+            $scope.newCustomer.city = '';
+            $scope.newCustomer.street = '';
+            $scope.newCustomer.houseName = '';
+            $scope.newCustomer.price = '';
         };
 
-
+        };
 
     app.controller("addCustomerController", addCustomerController);
 }());
