@@ -1,10 +1,7 @@
 (function(){
 
     var app = angular.module("myRound");
+    app.controller("MainController",  function($scope){
 
-    var MainController = function($scope){
-
-    };
-
-    app.controller("MainController", MainController);
+    });
 }());

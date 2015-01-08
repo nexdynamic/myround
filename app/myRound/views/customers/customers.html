@@ -24,8 +24,8 @@
         <ul ng-repeat="customer in customers | orderBy:'city'" class="listRow">
             <li>
                 <div class="customerEdit col-xs-1 col-xs-offset-1">
-                    <a href="#/editCustomer/{{customer.id}}"><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="" ng-click="deleteCustomer(customer.id)"><i class="glyphicon glyphicon-remove"></i></a>
+                    <a href="#/editCustomer/{{customer._id}}"><i class="glyphicon glyphicon-edit"></i></a>
+                    <a href="" ng-click="deleteCustomer(customer._id)"><i class="glyphicon glyphicon-remove"></i></a>
                 </div>
                 <div class="col-xs-2">{{customer.city}}</div>
                 <div class="col-xs-2">{{customer.customerName}}</div>

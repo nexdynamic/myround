@@ -1,0 +1,27 @@
+{
+  "name": "myround",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://chaosmark@github.com/nexdynamic/myround.git"
+  },
+  "author": "Mark Slater <mark.slater@sigma-systems.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nexdynamic/myround/issues"
+  },
+  "homepage": "https://github.com/nexdynamic/myround",
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "express": "^4.10.4",
+    "livedb-mongo": "^0.4.1",
+    "racer": "^0.6.0-alpha24",
+    "racer-browserchannel": "^0.3.0"
+
+  }
+}

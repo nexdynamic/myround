@@ -1,0 +1,28 @@
+{
+  "name": "myRound",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nexdynamic/myround",
+  "authors": [
+    "Mark Slater <mark.slater@sigma-systems.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.11.2",
+    "angular-route": "~1.2.26",
+    "angular-ui-grid": "~3.0.0-rc.12",
+    "angularjs": "~1.2.25",
+    "bootstrap": "~3.2.0",
+    "pouchdb": "~3.1.0"
+  }
+}

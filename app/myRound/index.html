@@ -13,6 +13,7 @@
     <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+    <script src="bower_components/pouchdb/dist/pouchdb.js"></script>
     <link type="text/css" rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css">
     <link type="text/css" rel="stylesheet" href="css/hover-min.css">
     <link type="text/css" href="css/main.css" rel="stylesheet">
@@ -20,7 +21,7 @@
     <link type="text/css" href="views/customers/customers.css" rel="stylesheet">
     <link type="text/css" href="views/customers/customerAdd.css" rel="stylesheet">
     <link type="text/css" href="views/jobsheets/jobsheets.css" rel="stylesheet">
-
+    <script src="script.js"></script>
 </head>
 
 
@@ -69,17 +70,13 @@
     </div> <!-- Main content -->
 
 </div>
-
-<script src="script.js"></script>
+<script src="modules/customers.js"></script>
 <script src="app.js"></script>
-<script src="factories/customersFactory.js"></script>
-<script src="controllers/customers/customersController.js"></script>
 <script src="controllers/jobsheets/jobsheetsController.js"></script>
 <script src="controllers/debts/debtsController.js"></script>
 <script src="controllers/MainController.js"></script>
 <script src="controllers/todo/todoController.js"></script>
-<script src="controllers/customers/addCustomerController.js"></script>
-<script src="controllers/customers/editCustomerController.js"></script>
+
 </body>
 
 </html>
