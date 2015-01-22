@@ -73,17 +73,32 @@
         //});
 
         $scope.deleteCustomer = function (id) {
-            var Delete;
-
             var r = confirm("Delete Customer ?");
             if (r == true) {
                 customersFactory.deleteCustomer(id).then(function () {
-
-                        $scope.customers.splice($scope.customers.filter(function(c){ return c._id === id}))
-
+                    $scope.customers.splice($scope.customers.filter(function(c){ return c._id === id}))
                 });
             }
         };
+
+
+        $scope.runClickEvent = function(){
+            console.log('Remove Has been clicked')
+        };
+
+        //Filter customer Table
+        $(document).ready(function () {
+            (function ($) {
+                $('#filter').keyup(function () {
+                    var rex = new RegExp($(this).val(), 'i');
+                    var search = $('.searchable tr');
+                    search.hide();
+                    search.filter(function () {
+                        return rex.test($(this).text());
+                    }).show();
+                })
+            }(jQuery));
+        });
     });
     app.controller("addCustomerController", function($scope, $location, customersFactory) {
 

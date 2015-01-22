@@ -1,38 +1,39 @@
-<div class="customer-header">
-    <span class="customer-header-title">Customers</span>
-
-    <div class="customer-header-options">
-        <span class="header-addCustomer"><a href="#addCustomer"><i class="glyphicon glyphicon-plus"></i>Add Customer</a></span>
+<div class="container-fluid">
+    <div class="btn-group">
+        <span><a class="btn btn-default btn-md add-customer" href="#addCustomer">Add Customer</a></span>
+        <span><a class="btn btn-default btn-md add-to-round" href="">Add To Round</a></span>
+        <div class="input-group"> <span class="input-group-addon">Filter</span>
+            <input id="filter" type="text" class="form-control" placeholder="Type here...">
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th><input type="checkbox" name="my-checkbox"></th>
+                <th>Name</th>
+                <th>City/Town</th>
+                <th>Street</th>
+                <th>House Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody class="searchable">
+            <tr ng-repeat="customer in customers">
+                <td><input type="checkbox" name="my-checkbox"></td>
+                <td>{{customer.customerName}}</td>
+                <td>{{customer.city}}</td>
+                <td>{{customer.street}}</td>
+                <td>{{customer.houseName}}</td>
+                <td>{{customer.price}}</td>
+                <td><a ng-click="deleteCustomer(customer._id)"><i class="fa fa-remove"></i>
+                </a><a href="#/editCustomer/{{customer._id}}"><i class="fa fa-edit"></i></a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
-<div class="col-xs-12 customer-list">
 
-
-    <div class="customerRow row">
-
-        <ul class="customer-list-headers">
-            <li>
-                <div class="col-xs-1 col-lg-offset-1">Edit</div>
-                <div class="col-xs-2">City</div>
-                <div class="col-xs-2">Name</div>
-                <div class="col-xs-2">Street</div>
-                <div class="col-xs-2">House Name</div>
-                <div class="col-xs-2">Price</div>
-            </li>
-        </ul>
-        <ul ng-repeat="customer in customers | orderBy:'city'" class="listRow">
-            <li>
-                <div class="customerEdit col-xs-1 col-xs-offset-1">
-                    <a href="#/editCustomer/{{customer._id}}"><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="" ng-click="deleteCustomer(customer._id)"><i class="glyphicon glyphicon-remove"></i></a>
-                </div>
-                <div class="col-xs-2">{{customer.city}}</div>
-                <div class="col-xs-2">{{customer.customerName}}</div>
-                <div class="col-xs-2">{{customer.street}}</div>
-                <div class="col-xs-2">{{customer.houseName}}</div>
-                <div class="col-xs-1">{{customer.price}}</div>
-            </li>
-        </ul>
-    </div>
-</div>

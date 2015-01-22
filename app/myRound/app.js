@@ -36,7 +36,7 @@
                 templateUrl: 'views/debts/debts.html',
                 controller: 'debtsController'
 
-            })
+          })
 
 
     });
