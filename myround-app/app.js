@@ -8,11 +8,6 @@
                 templateUrl: 'views/dashboard/dashboard.html',
                 controller: 'MainController'
             })
-            //.when('/customers',{
-            //    templateUrl: 'views/customers/customers.html',
-            //    controller: 'customersController',
-            //    resolve: customersFactory.getCustomers
-            //})
             .when('/addCustomer', {
                 templateUrl: 'views/customers/addCustomer.html',
                 controller: 'addCustomerController'

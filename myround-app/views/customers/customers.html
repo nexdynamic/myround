@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div class="btn-group">
         <span><a class="btn btn-default btn-md add-customer" href="#addCustomer">Add Customer</a></span>
-        <span><a class="btn btn-default btn-md add-to-round" href="">Add To Round</a></span>
-        <div class="input-group"> <span class="input-group-addon">Filter</span>
-            <input id="filter" type="text" class="form-control" placeholder="Type here...">
+        <span><a class="btn btn-default btn-md add-to-round">Add To Round</a></span>
+        <div class="input-group"><span class="input-group-addon">Filter</span>
+            <input id="filter" type="text" class="form-control" placeholder="Filter Customers">
         </div>
     </div>
     <div class="table-responsive">
@@ -27,7 +27,7 @@
                 <td>{{customer.street}}</td>
                 <td>{{customer.houseName}}</td>
                 <td>{{customer.price}}</td>
-                <td><a ng-click="deleteCustomer(customer._id)"><i class="fa fa-remove"></i>
+                <td><a ng-click="deleteCustomer(customer)"><i class="fa fa-remove"></i>
                 </a><a href="#/editCustomer/{{customer._id}}"><i class="fa fa-edit"></i></a>
                 </td>
             </tr>

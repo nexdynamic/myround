@@ -34,20 +34,37 @@
             });
         };
 
-        factory.deleteCustomer = function (id) {
-            return customersDb.get(id, function(err, doc) {
-                return customersDb.remove(doc);
+        factory.deleteCustomer = function (customer) {
+            return new Promise(function (resolve, reject) {
+                customersDb.remove(customer, function (err, response) {
+                    if (err) {
+                        reject(err);
+                        console.log("could not delete customer" + err);
+                    } else {
+                        resolve(response);
+                        console.log("removed customer")
+                    }
+                });
             });
         };
 
-        factory.getCustomer = function (id) {
-            return new Promise(function (resolve) {
-                customersDb.get(id).then(
-                    function (data) {
-                        resolve(data);
-                    });
+        factory.updateCustomer = function (customer) {
+            return new Promise(function (resolve, reject) {
+
+                customersDb.put(customer, function (err, response) {
+                    customer._rev = response.rev;
+                    if (err) {
+                        console.log(JSON.stringify(err));
+                        reject(err);
+                    } else {
+                        resolve(response);
+                        console.log('Updated customer')
+                    }
+                });
+
             });
         };
+
         return factory;
 
     });
@@ -67,23 +84,25 @@
     app.controller("customersController", function ($scope, customers, customersFactory) {
         $scope.customers = customers;
 
-        //customersFactory.getCustomers().then(function (customers) {
-        //  //  $scope.customers.removeAll();
-        //    //$scope.customers.push({customerName:'Mark'});
-        //});
+        $scope.refreshCustomers = function() {
 
-        $scope.deleteCustomer = function (id) {
-            var r = confirm("Delete Customer ?");
-            if (r == true) {
-                customersFactory.deleteCustomer(id).then(function () {
-                    $scope.customers.splice($scope.customers.filter(function(c){ return c._id === id}))
+            customersFactory.getCustomers().then(function(customers){
+
+                $scope.$apply(function(){
+                    $scope.customers = customers;
                 });
-            }
+            });
         };
 
-
-        $scope.runClickEvent = function(){
-            console.log('Remove Has been clicked')
+        $scope.deleteCustomer = function (id) {
+            var uSure = confirm("Delete Customer ?");
+            if (uSure == true) {
+                customersFactory.deleteCustomer(id).then(function(){
+                    $scope.$apply(function() {
+                        $scope.refreshCustomers();
+                    });
+                });
+            }
         };
 
         //Filter customer Table
@@ -105,6 +124,7 @@
         $scope.insertCustomer = function () {
             customersFactory.insertCustomer($scope.newCustomer)
                 .then(function() {
+                    $scope.refreshCustomers()
                     $location.path('/customers');
                 });
             $scope.newCustomer = {}
