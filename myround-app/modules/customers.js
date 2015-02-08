@@ -71,7 +71,7 @@
 
     app.config(function ($routeProvider) {
         $routeProvider.when('/customers', {
-            templateUrl: 'views/customers/customers.html',
+            templateUrl: 'templates/customers/customers.html',
             controller: 'customersController',
             resolve: {
                 customers: function (customersFactory) {

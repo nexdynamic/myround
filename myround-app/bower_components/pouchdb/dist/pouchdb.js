@@ -9615,7 +9615,7 @@ function checkQueryParseError(options, fun) {
       throw new QueryParseError('{include_docs:true} is invalid for reduce');
     } else if (options.keys && options.keys.length > 1 &&
         !options.group && !options.group_level) {
-      throw new QueryParseError('Multi-key fetches for reduce views must use {group: true}');
+      throw new QueryParseError('Multi-key fetches for reduce templates must use {group: true}');
     }
   }
   if (options.group_level) {

@@ -5,30 +5,30 @@
     app.config(function($routeProvider){
         $routeProvider
             .when('/', {
-                templateUrl: 'views/dashboard/dashboard.html',
-                controller: 'MainController'
+                templateUrl: 'templates/dashboard.html',
+                controller: 'dashboardController'
             })
             .when('/addCustomer', {
-                templateUrl: 'views/customers/addCustomer.html',
+                templateUrl: 'templates/customers/addCustomer.html',
                 controller: 'addCustomerController'
             })
             .when('/editCustomer', {
-                templateUrl: 'views/customers/editCustomer.html',
+                templateUrl: 'templates/customers/editCustomer.html',
                 controller: 'editCustomerController'
             })
             .when('/todo',{
-                templateUrl: 'views/todo/todo.html',
+                templateUrl: 'templates/todo.html',
                 controller: 'todoController'
             })
 
             .when('/jobsheets',{
-                templateUrl: 'views/jobsheets/jobsheets.html',
+                templateUrl: 'templates/jobsheets.html',
                 controller: 'jobsheetsController'
 
             })
 
             .when('/debts',{
-                templateUrl: 'views/debts/debts.html',
+                templateUrl: 'templates/debts.html',
                 controller: 'debtsController'
 
           })
