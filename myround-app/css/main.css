@@ -8,12 +8,21 @@ body{
     margin-right: 50px;
 }
 .navbar-default{
-    z-index: 999;
+    padding: 0;
+    z-index: 1002;
     background-color: #333333;
     border: none;
     border-radius: 0;
     margin: 0;
     color: #f8f8f8;
+}
+.navbar-logo{
+    position: relative;
+    top: 10px;
+    right: auto;
+    left: 50%;
+    margin-left: 0;
+    margin-right: 0;
 }
 .header-date{
     margin-left: 200px;

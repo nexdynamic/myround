@@ -2,7 +2,8 @@
 <html ng-app="myRound">
 
 <head>
-    <title>My Round</title>
+    <title>MyRound</title>
+    <link rel="shortcut icon" href="img/myRound-fav.ico"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,8 +20,8 @@
     <link rel="stylesheet" href="css/hover-min.css">
     <link href="css/main.css" rel="stylesheet">
     <link type="text/css" href="views/dashboard/dashboard.css" rel="stylesheet">
-    <link type="text/css" href="views/customers/customers.css" rel="stylesheet">
-    <link type="text/css" href="views/customers/customerAdd.css" rel="stylesheet">
+    <link type="text/css" href="css/customers.css" rel="stylesheet">
+    <link type="text/css" href="css/customerAdd.css" rel="stylesheet">
     <link type="text/css" href="views/jobsheets/jobsheets.css" rel="stylesheet">
 </head>
 
@@ -41,7 +42,9 @@
 
 
 <div class="navbar navbar-default">
-
+        <div class="navbar-logo">
+            <img src="img/myRound.png" height="30" width="130" rel="MyRound">
+        </div>
 </div>
 
 
@@ -51,7 +54,7 @@
 
 <script src="modules/customers.js"></script>
 <script src="app.js"></script>
-<script src="controllers/jobsheets/jobsheetsController.js"></script>
+<script src="modules/jobsheets.js"></script>
 <script src="controllers/debts/debtsController.js"></script>
 <script src="controllers/MainController.js"></script>
 <script src="controllers/todo/todoController.js"></script>

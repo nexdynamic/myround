@@ -132,13 +132,7 @@
 
     });
     app.controller('editCustomerController', function ($scope, $routeParams, customersFactory) {
-        $scope.customer = {};
 
-        //Grab customerID off of the route
-        var customerID = ($routeParams.customerID) ? parseInt($routeParams.customerID) : 0;
-        if (customerID > 0) {
-            $scope.customer = customersFactory.getCustomer(customerID);
-        }
 
     });
 

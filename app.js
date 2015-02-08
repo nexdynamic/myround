@@ -5,11 +5,11 @@ var app = express();
 var http = require('http');
 var server = http.createServer(app);
 
-app.use(express.static(__dirname + '/app/myround'));
+app.use(express.static(__dirname + '/myround-app/'));
 app.use(bodyParser());
 
 app.get('/', function (req, res) {
-    res.sendfile(__dirname + '/app/myRound/index.html');
+    res.sendfile(__dirname + '/myround-app/index.html');
 });
 
 
