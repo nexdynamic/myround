@@ -2,39 +2,9 @@
     <div class="btn-group">
         <span><a class="btn btn-default btn-md add-customer" href="#addCustomer">Add Customer</a></span>
         <span><a class="btn btn-default btn-md add-to-round">Add To Round</a></span>
+    </div>
 
-        <div class="input-group"><span class="input-group-addon">Filter</span>
-            <input id="filter" type="text" class="form-control" placeholder="Filter Customers">
-        </div>
-    </div>
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th><input type="checkbox" name="my-checkbox"></th>
-                <th>Name</th>
-                <th>City/Town</th>
-                <th>Street</th>
-                <th>House Name</th>
-                <th>Price</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody class="searchable">
-            <tr ng-repeat="customer in customers">
-                <td><input type="checkbox" name="my-checkbox"></td>
-                <td>{{customer.customerName}}</td>
-                <td>{{customer.city}}</td>
-                <td>{{customer.street}}</td>
-                <td>{{customer.houseName}}</td>
-                <td>{{customer.price}}</td>
-                <td><a ng-click="deleteCustomer(customer)"><i class="fa fa-remove"></i>
-                </a><a href="#/editCustomer/{{customer._id}}"><i class="fa fa-edit"></i></a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    <!--Customer ui-grid -->
+    <div ui-grid="{ data: customersGrid }" class="customers-grid"></div>
+
 </div>
-
-

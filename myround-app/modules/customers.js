@@ -3,18 +3,18 @@
 
     });
 
-
-
     var customersDb = new PouchDB('customers');
-    var factory = {};
-    app.factory('customersFactory', function () {
 
-        // factory.customersDb = new PouchDB('customers');
+    var factory = {};
+
+    app.factory('customersFactory', function () {
         factory.getCustomers = function () {
             return new Promise(function (resolve) {
                 customersDb.allDocs({include_docs: true})
                     .then(function (data) {
-                        var responseData = data.rows.map(function (row) { return row.doc; });
+                        var responseData = data.rows.map(function (row) {
+                            return row.doc;
+                        });
                         resolve(responseData);
                     });
             });
@@ -69,27 +69,18 @@
 
     });
 
-    app.config(function ($routeProvider) {
-        $routeProvider.when('/customers', {
-            templateUrl: 'templates/customers/customers.html',
-            controller: 'customersController',
-            resolve: {
-                customers: function (customersFactory) {
-                    return customersFactory.getCustomers();
-                }
-            }
-        })
-    });
 
     app.controller("customersController", function ($scope, customers, customersFactory) {
         $scope.customers = customers;
+        $scope.customersGrid = customers;
 
-        $scope.refreshCustomers = function() {
+        $scope.refreshCustomers = function () {
 
-            customersFactory.getCustomers().then(function(customers){
+            customersFactory.getCustomers().then(function (customers) {
 
-                $scope.$apply(function(){
+                $scope.$apply(function () {
                     $scope.customers = customers;
+                    $scope.customersGrid = customers
                 });
             });
         };
@@ -97,40 +88,24 @@
         $scope.deleteCustomer = function (id) {
             var uSure = confirm("Delete Customer ?");
             if (uSure == true) {
-                customersFactory.deleteCustomer(id).then(function(){
-                    $scope.$apply(function() {
+                customersFactory.deleteCustomer(id).then(function () {
+                    $scope.$apply(function () {
                         $scope.refreshCustomers();
                     });
                 });
             }
         };
-
-        //Filter customer Table
-        $(document).ready(function () {
-            (function ($) {
-                $('#filter').keyup(function () {
-                    var rex = new RegExp($(this).val(), 'i');
-                    var search = $('.searchable tr');
-                    search.hide();
-                    search.filter(function () {
-                        return rex.test($(this).text());
-                    }).show();
-                })
-            }(jQuery));
-        });
     });
-    app.controller("addCustomerController", function($scope, $location, customersFactory) {
+
+    app.controller("addCustomerController", function ($scope, $location, customersFactory) {
 
         $scope.insertCustomer = function () {
-            customersFactory.insertCustomer($scope.newCustomer)
-                .then(function() {
-                    $scope.refreshCustomers()
-                    $location.path('/customers');
-                });
+            customersFactory.insertCustomer($scope.newCustomer);
+            $location.path('customers');
             $scope.newCustomer = {}
         };
-
     });
+
     app.controller('editCustomerController', function ($scope, $routeParams, customersFactory) {
 
 

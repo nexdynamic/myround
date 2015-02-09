@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myRound">
+<html>
 
 <head>
     <title>MyRound</title>
@@ -10,49 +10,61 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/less/dist/less.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="bower_components/angularjs/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
     <script src="bower_components/pouchdb/dist/pouchdb.js"></script>
-    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css">
-    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
-    <link href="css/myround.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css">
+    <link type="text/css" rel="stylesheet" href="css/myround.css">
 </head>
 
-<div class="side-nav">
-    <ul>
-        <li class="link1" ng-class="{ active1: isActive('/')}"><a href="#"><i class="fa fa-bar-chart fa-2x"></i><br>Dashboard</a>
-        </li>
-        <li class="link2" ng-class="{ active2: isActive('/customers')}"><a href="#customers"><i
-                class="fa fa-users fa-2x"></i><br>Customers</a></li>
-        <li class="link3" ng-class="{ active3: isActive('/jobsheets')}"><a href="#jobsheets"><i
-                class="fa fa-list-alt fa-2x"></i><br>Rounds</a></li>
-        <li class="link4" ng-class="{ active4: isActive('/todo')}"><a href="#todo"><i
-                class="fa fa-calendar fa-2x"></i><br>To Do</a></li>
-        <li class="link5" ng-class="{ active5: isActive('/debts')}"><a href="#debts"><i
-                class="fa fa-credit-card fa-2x"></i><br>Debts</a></li>
-    </ul>
-</div>
+<body ng-controller="MainController" ng-app="myRound">
+
+<header>
+    <div class="side-nav">
+        <ul>
+            <li class="link1" ng-class="{ active1: isActive('/')}"><a href="#"><i class="fa fa-bar-chart fa-2x"></i><br>Dashboard</a>
+            </li>
+            <li class="link2" ng-class="{ active2: isActive('/customers')}"><a href="#customers"><i
+                    class="fa fa-users fa-2x"></i><br>Customers</a></li>
+            <li class="link3" ng-class="{ active3: isActive('/jobsheets')}"><a href="#jobsheets"><i
+                    class="fa fa-list-alt fa-2x"></i><br>Rounds</a></li>
+            <li class="link4" ng-class="{ active4: isActive('/todo')}"><a href="#todo"><i
+                    class="fa fa-calendar fa-2x"></i><br>To Do</a></li>
+            <li class="link5" ng-class="{ active5: isActive('/debts')}"><a href="#debts"><i
+                    class="fa fa-credit-card fa-2x"></i><br>Debts</a></li>
+        </ul>
+    </div>
 
 
-<div class="navbar navbar-default">
-        <div class="navbar-logo">
-            <img src="img/myRound.png" height="30" width="130" rel="MyRound">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="col-xs-12">
+                <div class="navbar-logo">
+                    <img src="img/myRound.png" height="30" width="130" rel="MyRound">
+                </div>
+            </div>
         </div>
-</div>
+    </div>
+</header>
 
-
-<body ng-controller="MainController">
 
 <div data-ng-view id="view"></div>
+
+
+<!-- Modules -->
 <script src="app.js"></script>
-<script src="controllers/MainController.js"></script>
 <script src="modules/dashboard.js"></script>
 <script src="modules/customers.js"></script>
-<script src="modules/jobsheets.js"></script>
+<script src="modules/rounds.js"></script>
+<!-- Controllers -->
+<script src="controllers/MainController.js"></script>
 <script src="controllers/debts/debtsController.js"></script>
 <script src="controllers/todo/todoController.js"></script>
+<!-- Factories -->
 </body>
 
 </html>
